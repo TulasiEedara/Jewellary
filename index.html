@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gleam & Glow</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+        :root {
+            --primary-color: #B29B87;
+            --secondary-color: #EAE6E1;
+            --text-color: #3C3C3C;
+            --background-color: #F8F5F2;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://via.placeholder.com/1500x800/69665f/FFFFFF?text=Jewellery+Store+Hero+Banner') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 10rem 2rem;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-top: 0;
+            color: var(--text-color);
+        }
+
+        .product-info p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .product-info .price {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .buy-button {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .buy-button:hover {
+            background-color: #A38C7A;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <h1>Gleam & Glow</h1>
+        <p>Elegance in every piece. ✨</p>
+    </header>
+
+    <main class="container">
+        <section class="products">
+            <h2>Our Collection</h2>
+            <div class="products-grid">
+                <div class="product-card" data-id="1">
+                    <img src="https://via.placeholder.com/400x300/F0D597/3C3C3C?text=Elegant+Necklace" alt="Elegant Necklace">
+                    <div class="product-info">
+                        <h3>Elegant Necklace</h3>
+                        <p>A stunning, delicate necklace for a sophisticated look.</p>
+                        <span class="price">$120.00</span>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="2">
+                    <img src="https://via.placeholder.com/400x300/F0D597/3C3C3C?text=Diamond+Earrings" alt="Diamond Earrings">
+                    <div class="product-info">
+                        <h3>Diamond Earrings</h3>
+                        <p>Sparkling earrings to complement any outfit.</p>
+                        <span class="price">$250.00</span>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="3">
+                    <img src="https://via.placeholder.com/400x300/F0D597/3C3C3C?text=Silver+Bracelet" alt="Silver Bracelet">
+                    <div class="product-info">
+                        <h3>Silver Bracelet</h3>
+                        <p>Classic sterling silver bracelet, perfect for daily wear.</p>
+                        <span class="price">$85.00</span>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="4">
+                    <img src="https://via.placeholder.com/400x300/F0D597/3C3C3C?text=Gold+Ring" alt="Gold Ring">
+                    <div class="product-info">
+                        <h3>Gold Ring</h3>
+                        <p>Timeless gold ring with a simple yet elegant design.</p>
+                        <span class="price">$180.00</span>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="5">
+                    <img src="https://via.placeholder.com/400x300/F0D597/3C3C3C?text=Pearl+Pendant" alt="Pearl Pendant">
+                    <div class="product-info">
+                        <h3>Pearl Pendant</h3>
+                        <p>A lustrous pearl pendant on a delicate chain.</p>
+                        <span class="price">$150.00</span>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-id="6">
+                    <img src="https://via.placeholder.com/400x300/F0D597/3C3C3C?text=Rose+Gold+Watch" alt="Rose Gold Watch">
+                    <div class="product-info">
+                        <h3>Rose Gold Watch</h3>
+                        <p>A sophisticated watch with a modern rose gold finish.</p>
+                        <span class="price">$300.00</span>
+                        <button class="buy-button">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2024 Gleam & Glow. All Rights Reserved.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const products = document.querySelectorAll('.product-card');
+
+            products.forEach(product => {
+                const buyButton = product.querySelector('.buy-button');
+                buyButton.addEventListener('click', () => {
+                    const id = product.dataset.id;
+                    const name = product.querySelector('h3').textContent;
+                    const price = product.querySelector('.price').textContent;
+                    const image = product.querySelector('img').src;
+                    
+                    const selectedProduct = { id, name, price, image };
+                    localStorage.setItem('selectedProduct', JSON.stringify(selectedProduct));
+                    
+                    window.location.href = 'form.html';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
